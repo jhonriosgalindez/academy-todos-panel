@@ -1,0 +1,39 @@
+.TaskItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; 
+    padding: 10px;
+    line-height: 3rem;
+    transition: all .5s;
+    font-size: 1.6rem;
+    color: #4682B4;
+    background-color: #fff;
+}
+
+.TaskItem:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #4682B4;
+}
+
+.TaskItem-check, .TaskItem-delete {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all .25s;
+    cursor: pointer;
+}
+
+.TaskItem-check:hover, .TaskItem-check--activa {
+    color: #fff;
+    background-color: green;
+}
+
+.TaskItem-delete:hover {
+    color: #fff;
+    background-color: red;
+}
+
+.TaskItem-text--completed {
+    text-decoration: line-through;
+}

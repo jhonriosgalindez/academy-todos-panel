@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { TaskCounter } from "./TaskCounter";
+import { TaskSearch } from "./TaskSearch";
+import { TaskList } from "./TaskList";
+import { TaskItem } from "./TaskItem";
+import { TaskButton } from "./TaskButton";
+
+const task = [
+    { text: 'Construir la plantilla HTML', completed: true},
+    { text: 'Crear los estilos', completed: false},
+    { text: 'Tarea 3', completed: false},
+    { text: 'Tarea 4', completed: false},
+    { text: 'Tarea 5', completed: false},
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <React.Fragment>
+            <TaskCounter />
+
+            <TaskSearch />
+
+            <TaskList>
+                {task.map(oneTask => (
+                    <TaskItem key={oneTask.text} text={oneTask.text} completed={oneTask.completed} />
+                ))}
+            </TaskList>
+
+            <TaskButton />
+        </React.Fragment>
+    );
 }
 
 export default App;

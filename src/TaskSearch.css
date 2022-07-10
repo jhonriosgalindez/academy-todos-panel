@@ -1,0 +1,15 @@
+.TaskSearch {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+    min-width: 300px;
+    max-width: 600px;
+    font-size: 1.8rem;
+    font-family: 'Edu SA Beginner', cursive;
+    outline: none;
+}
+
+.TaskSearch:hover {
+    outline: 1px solid #0000CD;
+}

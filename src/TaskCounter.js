@@ -1,9 +1,9 @@
 import React from 'react';
 import "./TaskCounter.css";
 
-function TaskCounter() {
+function TaskCounter({ completed, total}) {
     return (
-        <h2 className="TaskCounter">Tareas completadas 2/5</h2>
+        <h2 className="TaskCounter">Tareas completadas {completed}/{total}</h2>
     );
 }
 

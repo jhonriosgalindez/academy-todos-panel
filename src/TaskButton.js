@@ -2,8 +2,16 @@ import React from "react";
 import "./TaskButton.css";
 
 function TaskButton() {
+    const onClickButton = () => {
+        alert('has agregado una tarea');
+    }
+
     return (
-        <button className="TaskButton">+</button>
+        <button className="TaskButton"
+        onClick={onClickButton}
+        >
+        +
+        </button>
     );
 }
 

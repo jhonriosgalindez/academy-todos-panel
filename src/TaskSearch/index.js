@@ -9,10 +9,10 @@ function TaskSearch({ searchValue, setSearchValue }) {
 
     return (
         <input 
-        className="TaskSearch" 
-        placeholder="Tarea..." 
-        onChange={onSearchValueChange}
-        value={searchValue}
+            className="TaskSearch" 
+            placeholder="Tarea..." 
+            onChange={onSearchValueChange}
+            value={searchValue}
         />
     );
 }

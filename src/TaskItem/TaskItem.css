@@ -6,12 +6,12 @@
     line-height: 3rem;
     transition: all .5s;
     font-size: 1.6rem;
+    border: 1px solid #fff;
     color: #4682B4;
     background-color: #fff;
 }
 
 .TaskItem:hover {
-    border: 1px solid #fff;
     color: #fff;
     background-color: #4682B4;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useSyncExternalStore } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
 const TaskContext = React.createContext();
@@ -10,6 +10,7 @@ function TaskProvider(props) {
     loading, error 
   } = useLocalStorage('TASKS_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
+  const [openModal, setOpenModal] = React.useState(false);
   
   let searchedTask = [];
   
@@ -26,6 +27,15 @@ function TaskProvider(props) {
   
   const taskCompleted = tasks.filter(task => task.completed).length;
   const taskTotal = tasks.length;
+
+  const addTask = (text) => {
+      const newTask = [...tasks];
+      newTask.push({
+        completed: false,
+        text,
+      });
+      saveTasks(newTask);
+  }
 
   const completeTask = (text) => {
       const taskIndex = tasks.findIndex(task => task.text === text);
@@ -53,6 +63,9 @@ function TaskProvider(props) {
       searchedTask,
       completeTask,
       deleteTask,
+      openModal,
+      setOpenModal,
+      addTask,
     }}>
       {props.children}
     </TaskContext.Provider>

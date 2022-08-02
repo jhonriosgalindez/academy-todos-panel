@@ -6,10 +6,6 @@
     min-width: 300px;
     max-width: 600px;
     font-size: 1.8rem;
-    font-family: 'Edu SA Beginner', cursive;
     outline: none;
-}
-
-.TaskSearch:hover {
-    outline: 1px solid #0000CD;
+    font-family: 'Times New Roman', Times, serif;
 }

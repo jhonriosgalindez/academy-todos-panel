@@ -5,6 +5,8 @@ import { TaskSearch } from "../TaskSearch";
 import { TaskList } from "../TaskList";
 import { TaskItem } from "../TaskItem";
 import { TaskButton } from "../TaskButton";
+import { Modal } from "../Modal";
+import { TaskForm } from "../TaskForm";
 
 
 function AppUI() {
@@ -14,6 +16,8 @@ function AppUI() {
     searchedTask, 
     completeTask, 
     deleteTask, 
+    openModal,
+    setOpenModal,
   } = React.useContext(TaskContext);
 
   return (
@@ -38,7 +42,16 @@ function AppUI() {
         ))}
       </TaskList>
 
-      <TaskButton />
+      <TaskButton 
+        setOpenModal={setOpenModal}
+      />
+
+      {openModal && (
+        <Modal>
+          <TaskForm />
+        </Modal>
+      )}
+
     </React.Fragment>
   );
 }

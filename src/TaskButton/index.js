@@ -1,9 +1,9 @@
 import React from "react";
 import "./TaskButton.css";
 
-function TaskButton() {
+function TaskButton(props) {
     const onClickButton = () => {
-        alert('has agregado una tarea');
+        props.setOpenModal(prevState => !prevState);
     }
 
     return (

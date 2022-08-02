@@ -13,7 +13,7 @@ function TaskSearch() {
     return (
         <input 
             className="TaskSearch" 
-            placeholder="Tarea..." 
+            placeholder="Buscar tarea..." 
             onChange={onSearchValueChange}
             value={searchValue}
         />
